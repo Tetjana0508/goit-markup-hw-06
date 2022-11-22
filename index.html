@@ -449,6 +449,8 @@
         </div>
       </div>
     </footer>
+
+    <!--Модальне вікно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
@@ -457,7 +459,31 @@
           </svg>
         </button>
       </div>
+      <div role="group">
+        <form class="">
+        <label for="name">І'мя</label>
+        <input type="text" name="name" id="name">
+
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel">
+
+        <label for="email">Пошта</label>
+        <input type="email" name="mail" id="email">
+
+        <label for="comment">Коментар</label>
+        <textarea name="comment" id="comment" rows="8"></textarea>
+
+
+
+        <input type="checkbox" name="" id="">
+
+        <button type="submit">Відправити</button>
+      </form>
+      </div>
+      
     </div>
+
+    <!--script_js-->
     <script src="./js/modal.js"></script>
   </body>
 </html>
