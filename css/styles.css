@@ -740,3 +740,40 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+
+
+
+.form {
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding: 28px;*/
+}
+
+.fotm-heading {
+font-size: 20px;
+line-height: 0.8696;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-text-color);
+}
+
+.form-field {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin: 4px;
+  font-size: 12px;
+  line-height: 0.8571;
+  letter-spacing: 0.01em;
+}
+
+.form-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
