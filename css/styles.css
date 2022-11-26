@@ -837,7 +837,9 @@ body {
   letter-spacing: 0.01em;
 }
 
-.form-field input {
+.form-input {
+  /* width: 448px; */
+  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -853,4 +855,12 @@ body {
 
 .comment {
   padding: 0;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):valid {
+  background-color: rgba(0, 128, 0, 0.15);
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: rgba(128, 19, 0, 0.15);
 }
