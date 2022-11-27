@@ -572,16 +572,11 @@ body {
 
 
 /* ..........Розсилка.............. */
-/* .footer-newsletter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 570px;
-} */
 
 .footer-newsletter {
-  display: block;
-  align-items: center;
-  /* width: 570px; */
+  /* display: fixed;
+  /* align-items: center; */
+  position: relative;
 }
 
 .footer-form {
@@ -589,18 +584,49 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  /* position: relative; */
 }
 
 .footer-input {
-  display: block;
+  /* position: relative; */
+  display: flex;
   align-items: center;
   width: 358px;
   height: 50px;
-  color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+.footer-input:focus + .footer-label,
+.footer-input:not(:placeholder-shown) + .footer-label {
+  transform: translateY(-100%);
+  color: var(--accent-color);
+}
+
+.footer-input:focus,
+.footer-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+}
+
+.footer-label {
+  position: absolute;
+  left: 0;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-link {
@@ -698,7 +724,7 @@ body {
   text-decoration: none;
   list-style: none;
   color: var(--title-text-color);
-  transition: box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .filter-link:hover,
@@ -808,7 +834,7 @@ body {
 .fotm-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 0.8696;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -823,7 +849,7 @@ body {
 
 .form-label {
   font-size: 12px;
-  line-height: 0.8571;
+  line-height: 1.1667;
   letter-spacing: 0.01em;
   height: 14px;
   margin-bottom: 4px;
@@ -845,7 +871,9 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  font-size: 12px;  
+  font-size: 12px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .modal-form-icon {
@@ -881,7 +909,7 @@ body {
   padding: 12px 16px; 
   font-weight: 400;
   font-size: 12px;
-  line-height: 0.8571;
+  line-height: 1.1667;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -989,16 +1017,5 @@ body {
   letter-spacing: 0.06em;
   color: var(--subject-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-/* .button-form:hover,
-.button-form:focus {
-  color: var(--subject-color);
-  background-color: var(--accent-color);
-  box-shadow: transparent;
-}
-
-/* .button-form.flowing {
-  color: var(--subject-color);
-  background-color: var(--accent-color);
-} */
