@@ -895,3 +895,11 @@ body {
   background-color: rgba(128, 19, 0, 0.15);
 }
 
+.check-text {
+  font-size: 14px;
+  line-height: 0.5833px;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+}
+
