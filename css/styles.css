@@ -68,7 +68,6 @@ body {
 }
 
 .header-nav {
-  
   background-color: var(--subject-color);
   border-bottom: 1px solid #ECECEC;
 }
@@ -592,7 +591,7 @@ body {
   gap: 12px;
 }
 
-.footer-email {
+.footer-input {
   display: block;
   align-items: center;
   width: 358px;
@@ -826,6 +825,7 @@ body {
   font-size: 12px;
   line-height: 0.8571;
   letter-spacing: 0.01em;
+  height: 14px;
   margin-bottom: 4px;
   display: block;
   position: relative;
@@ -903,11 +903,12 @@ body {
 
 .check-text {
   font-size: 14px;
-  line-height: 0.5833px;
+  line-height: 1.7123px;
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
   position: relative;
+  height: 24px;
 }
 
 .visually-hidden {
@@ -922,7 +923,7 @@ body {
 
 .check-text span {
   position: relative;
-  left: 0;
+  left: 0;  
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
@@ -967,13 +968,19 @@ body {
 } */
 
 .form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.button-form {
   display: block;
   align-items: center;
   justify-content: center;
   font-family: inherit;
   padding: 10px 52px;
   background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  box-shadow: transparent;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -983,3 +990,15 @@ body {
   color: var(--subject-color);
   cursor: pointer;
 }
+
+/* .button-form:hover,
+.button-form:focus {
+  color: var(--subject-color);
+  background-color: var(--accent-color);
+  box-shadow: transparent;
+}
+
+/* .button-form.flowing {
+  color: var(--subject-color);
+  background-color: var(--accent-color);
+} */
