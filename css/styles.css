@@ -886,7 +886,6 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-
 .form-input:not(:focus):not(:placeholder-shown):valid {
   background-color: rgba(0, 128, 0, 0.15);
 }
@@ -901,9 +900,22 @@ body {
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .check-text span {
+  position: relative;
+  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
@@ -919,6 +931,10 @@ body {
   background-color: var(--accent-color);
   border: none;
   fill: var(--subject-color);
+}
+
+.form-check:focus + .check-text span {
+  border-color: var(--accent-color);
 }
 
 /* .check-text::before {
