@@ -903,3 +903,37 @@ body {
   align-items: center;
 }
 
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.form-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: none;
+  fill: var(--subject-color);
+}
+
+/* .check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.form-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  border: none;
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+} */
