@@ -18,7 +18,7 @@ font-family: 'Roboto', sans-serif;*/
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --logo-color: #000000;
   --primary-bg-color: #f5f5f5;
-  --secondary-bg-color: #e6e6e9;
+  --secondary-bg-color: #F5F4FA;
   --nav-bg-color: #2f303a;
 }
 
@@ -588,7 +588,6 @@ body {
 }
 
 .footer-input {
-  /* position: relative; */
   display: flex;
   align-items: center;
   width: 358px;
@@ -830,6 +829,11 @@ body {
   justify-content: center;
   background: transparent;
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -918,7 +922,15 @@ body {
   font-size: 12px;
   line-height: 1.1667;
   letter-spacing: 0.01em;
+  outline:none;
   color: rgba(117, 117, 117, 0.5);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus,
+.form-textarea:hover {
+  border-color: var(--accent-color);
+  color: var(--logo-color);
 }
 
 .form-input:not(:focus):not(:placeholder-shown):valid {
@@ -933,6 +945,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 30px;
 }
 
